@@ -161,6 +161,6 @@ $defs << "-pedantic"
 
 $CFLAGS  << ' -Wall -funroll-loops'
 $CFLAGS  << ' -Wextra -O0 -ggdb3' if ENV['DEBUG']
-$LDFLAGS << " -Wl,-rpath,ext/rbczmq/dst/lib/"
+$LDFLAGS << " -Wl,-rpath=#{libs_path.to_s}"
 
 create_makefile('rbczmq_ext')
